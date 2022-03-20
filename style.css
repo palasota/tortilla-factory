@@ -167,7 +167,6 @@ div.banner img {
 
 .banner-text h4 {
     font-size: 15px;
-    font-family: cursive;
     letter-spacing: 1px;
     line-height: 2;
 }
@@ -614,10 +613,54 @@ div.banner img {
         font-size: 20px;
     }
 
+}
 
+@media(max-width:1023px) and (orientation:landscape) {
+    div.logo {
+        top: 50px;
+        left: 10px;
+        transform: translate(0, 0);
+        width: 30vw;
+    }
 
+    /* ---BANNER-TEXT--- */
 
+    .banner-text {
+        top: 50px;
+        left: 100px;
 
+    }
+
+    .banner-text h1 {
+        font-size: 50px;
+    }
+
+    .banner-text h2 {
+        font-size: 30px;
+    }
+
+    .banner-text h3 {
+        font-size: 20px;
+        padding-bottom: 50px;
+    }
+
+    .banner-text h4 {
+        font-size: 15px;
+
+    }
+
+    /* ---ABOUT --- */
+
+    .about-wrap {
+        margin: 20px;
+        display: flex;
+    }
+
+    .about-company {
+        max-width: 1600px;
+        margin: 50px auto;
+        position: relative;
+    }
 }
 
 @media(max-width:820px) {
