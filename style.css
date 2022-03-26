@@ -86,6 +86,7 @@ div.logo {
     letter-spacing: 1.2px;
     overflow: hidden;
     cursor: pointer;
+    line-height: 30px;
 }
 
 
@@ -132,8 +133,7 @@ div.banner img {
     flex-direction: column;
     top: calc(50px + 10vw);
     height: calc(100vh - 50px - 10vw);
-    color: #ccc;
-    justify-content: space-around;
+    color: white;
     align-items: stretch;
     text-align: center;
     line-height: 1.5;
@@ -416,6 +416,178 @@ div.banner img {
 
 }
 
+/* ----------PRODUKT GŁÓWNY------ */
+
+
+.product-title {
+    font-size: 60px;
+    border-bottom-style: double;
+    color: #373B3A;
+    margin: 50px;
+    max-width: 1600px;
+    line-height: 100px;
+
+}
+
+.main-product-border {
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    margin: 50px auto;
+    max-width: 1600px;
+}
+
+.main-product-wrap {
+    position: relative;
+    width: 20%;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #6F8B00;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.main-product-title {
+    padding: 18px;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 1.5;
+
+}
+
+.product-icon {
+    margin: 0 auto;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    transition: 0.3s;
+}
+
+.main-product-icon {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-product-description {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+}
+
+.main-product-wrap:hover {
+    background-color: #6F8B00;
+    transform: scale(1.1);
+}
+
+.main-product-wrap:hover .main-product-description {
+    color: white;
+}
+
+.main-product-wrap:hover .main-product-title {
+    color: white;
+}
+
+.main-product-wrap:hover .product-icon {
+    background-color: white;
+
+}
+
+/* ----DOSTAWA----- */
+.delivery-border {
+    padding: 100px 0 50px;
+    background-color: #6F8B00;
+    display: flex;
+    justify-content: center;
+
+}
+
+.delivery-wrap {
+    position: relative;
+    width: 20%;
+    font-size: 12px;
+    text-align: center;
+    padding: 15px;
+    margin: 30px 10px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    cursor: pointer;
+
+}
+
+
+
+.delivery-title {
+    margin-top: 100px;
+    padding: 18px;
+    font-size: 15px;
+    text-transform: uppercase;
+    line-height: 1.5;
+
+}
+
+.delivery-icon {
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50% 50%;
+    border: #6F8B00 solid 5px;
+    background-color: white;
+
+}
+
+.img-delivery-icon {
+    position: absolute;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+
+}
+
+.delivery-description {
+    font-size: 15px;
+    text-align: center;
+    line-height: 1.5;
+    letter-spacing: 1px;
+
+}
+
+.green {
+    display: none;
+    transition: 1s;
+}
+
+.black {
+    display: block;
+    transition: 1s;
+}
+
+
+.delivery-wrap:hover .green {
+    display: block;
+}
+
+.delivery-wrap:hover .black {
+    display: none;
+}
+
+
+
 /* --------MEDIA QUERIES------- */
 
 
@@ -567,6 +739,26 @@ div.banner img {
         display: none;
         text-align: center
     }
+
+    /* ---MAIN PRODUCT--- */
+
+    .main-product-border {
+        flex-wrap: wrap;
+        margin: 50px 50px;
+    }
+
+    .main-product-wrap {
+        width: 45%;
+        margin: 30px auto;
+
+    }
+
+
+
+    .delivery-wrap {
+        width: 30%;
+    }
+
 
 }
 
@@ -750,7 +942,7 @@ div.banner img {
 
 }
 
-@media(max-width:414px) {
+@media(max-width:540px) {
 
     /* ---BANNER-TEKST--- */
 
@@ -776,8 +968,34 @@ div.banner img {
         max-width: 100%;
     }
 
-    /* ---ABOUT --- */
+    /* ---MAIN PRODUCT--- */
 
+    .product-title {
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    .main-product-border {
+        margin: 50px 25px;
+    }
+
+    .main-product-wrap {
+        width: 100%;
+        margin: 25px auto;
+
+    }
+
+    /* --DOSTAWA-- */
+    .delivery-border {
+        flex-wrap: wrap;
+        padding: 0 0 50px;
+
+    }
+
+    .delivery-wrap {
+        width: 100%;
+        margin: 150px 15px 0px;
+    }
 
     /* ---ABOUT PRODUCT--- */
 
@@ -796,6 +1014,10 @@ div.banner img {
         line-height: 40px;
 
     }
+
+}
+
+@media(max-width:414px) {
 
     /* ---KONTAKT-- */
 
