@@ -802,9 +802,6 @@ div.banner img {
         cursor: pointer;
     }
 
-    .partMenu:hover {
-        color: #445306
-    }
 
     .partMenu:hover::after {
         width: 0;
